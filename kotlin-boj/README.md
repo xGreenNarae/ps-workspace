@@ -11,6 +11,7 @@
 
 구현 로직은 `src/main/kotlin/Main.kt`의 `// main logic` 주석 위치에 작성합니다.  
 입력 값을 `inputCursor.next()` 로 한 줄씩 가져올 수 있습니다.  
+최종 출력 값은 한 줄씩 `output.add()` 로 추가합니다.  
 
 #### 테스트 실행  
 로컬에 설치된 gradle을 사용하는 경우,  
