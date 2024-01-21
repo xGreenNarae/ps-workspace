@@ -1,9 +1,17 @@
 class Main
 
 fun main() {
-    val input: List<String> = generateSequence(::readlnOrNull).toList()
+    // fast I/O
+    val reader = System.`in`.bufferedReader()
+    val writer = System.out.bufferedWriter()
+
+    val input: List<String> = generateSequence { reader.readLine() }.toList()
     val output: List<String> = resolver(input)
-    output.forEach(::println)
+    output.forEach { writer.write("$it\n") }
+
+    writer.flush()
+    reader.close()
+    writer.close()
 }
 
 fun resolver(input: List<String>): List<String> {
@@ -14,4 +22,3 @@ fun resolver(input: List<String>): List<String> {
 
     return output
 }
-
