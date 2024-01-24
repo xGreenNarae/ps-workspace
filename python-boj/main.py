@@ -1,3 +1,6 @@
+import sys
+
+
 def resolver(input_lines: list[str]):
     input_cursor = iter(input_lines)
     output_lines: list[str] = []
@@ -7,7 +10,7 @@ def resolver(input_lines: list[str]):
     boards = list(map(int, next(input_cursor).split()))
     result: list = [0] * n
 
-    for i in range(n-1, -1, -1):
+    for i in range(n - 1, -1, -1):
         refer_index = boards[i] + 1 + i
         if refer_index >= n:
             result[i] = 1
@@ -19,8 +22,7 @@ def resolver(input_lines: list[str]):
 
 
 def main():
-    with open("input.txt", 'r') as file:
-        input_lines = file.read().strip().split('\n')
+    input_lines = sys.stdin.read().splitlines()
 
     output_lines = resolver(input_lines)
 
