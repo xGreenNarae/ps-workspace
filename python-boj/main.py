@@ -1,10 +1,11 @@
 def resolver(input_lines: list[str]):
-    # main logic
-    sum_list = []
-    for line in input_lines:
-        sum_list.append(sum(map(int, line.split())))
+    input_cursor = iter(input_lines)
 
-    return list(map(str, sum_list))
+    # main logic
+    input1 = next(input_cursor)
+    input2 = next(input_cursor)
+
+    return
 
 
 def main():
