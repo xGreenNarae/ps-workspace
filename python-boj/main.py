@@ -1,11 +1,21 @@
 def resolver(input_lines: list[str]):
     input_cursor = iter(input_lines)
+    output_lines: list[str] = []
 
     # main logic
-    input1 = next(input_cursor)
-    input2 = next(input_cursor)
+    n = int(next(input_cursor))
+    boards = list(map(int, next(input_cursor).split()))
+    result: list = [0] * n
 
-    return
+    for i in range(n-1, -1, -1):
+        refer_index = boards[i] + 1 + i
+        if refer_index >= n:
+            result[i] = 1
+        else:
+            result[i] = 1 + result[refer_index]
+
+    output_lines.append(' '.join(map(str, result)))
+    return output_lines
 
 
 def main():
