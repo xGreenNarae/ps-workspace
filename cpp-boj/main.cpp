@@ -1,16 +1,18 @@
 #include <iostream>
-#include <fstream>
-#include <vector>
-#include <string>
 
 using namespace std;
 
-int main() {
-    int n, m;
-    cin >> n >> m;
+void init()
+{
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+}
 
-    cout << n + m << '\n';
+int main()
+{
+    init();
+
 
     return 0;
 }
-
